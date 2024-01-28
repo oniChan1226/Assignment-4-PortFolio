@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css -->
+    <link rel="stylesheet" href="styles.css">
+    <title>Fahad's Portfolio</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <!-- nav-links -->
+            <ul class="mob-nav-btn" id="hamburger-btn">
+                <div id="bar1" class="bar"></div>
+                <div id="bar2" class="bar"></div>
+                <div id="bar3" class="bar"></div>
+            </ul>
+            <ul class="nav-links-container">
+                <li><a class="nav-links" href="index.html">Home</a></li>
+                <li><a class="nav-links" href="#skills">Skills</a></li>
+                <li><a class="nav-links" href="#contact">Contact</a></li>
+            </ul>
+            <!-- CV Button -->
+            <button type="button" id="getCV">Download CV</button>
+        </div>
+    </nav>
+
+    <!-- home -->
+    <section id="home">
+        <div id="hero-heading">
+            Welcome to My Portfolio.
+        </div>
+        <button type="button" id="click-me">Click Me</button>
+
+        <div id="intro">
+            <h2>Hello there! I'm Fahad</h2>
+            <p>A passionate and innovative software and front-end web developer with a love for creating engaging and
+                user-friendly digital experiences. <br>
+                With a solid foundation in software development and a keen eye for design, I strive to bring ideas to
+                life through elegant and efficient code.</p>
+            <button class="intro-btn" id="back-btn">Back</button>
+            <button class="intro-btn" id="learn-more-btn">Learn More</button>
+        </div>
+    </section>
+
+    <!-- skills -->
+    <section id="skills">
+        <div class="cards-container">
+            <!-- card-1 -->
+            <div class="cards">
+                <div class="left">
+                    <i class="fa-brands fa-html5 html-tag tags"></i>
+                </div>
+                <div class="right">
+                    <h2 class="right-heading">HTML</h2>
+                    <p class="right-para">Proficient in HTML5, creating well-structured and semantic markup.
+                        Experienced in building responsive and accessible web pages.</p>
+                </div>
+            </div>
+            <!-- card-1 end -->
+            <!-- card-2 -->
+            <div class="cards">
+                <div class="left">
+                    <i class="fa-brands fa-css3-alt css-tag tags"></i>
+                </div>
+                <div class="right">
+                    <h2 class="right-heading">CSS</h2>
+                    <p class="right-para">Skilled in CSS3 for styling, including responsive design and CSS frameworks.
+                        Capable of creating visually appealing and user-friendly interfaces.</p>
+                </div>
+            </div>
+            <!-- card-2 end -->
+            <!-- card-3 -->
+            <div class="cards">
+                <div class="left">
+                    <i class="fa-brands fa-js js-tag tags"></i>
+                </div>
+                <div class="right">
+                    <h2 class="right-heading">JavaScript</h2>
+                    <p class="right-para">Proficient in JavaScript, with experience in modern frameworks like React.
+                        Capable of developing dynamic and interactive web applications.</p>
+                </div>
+            </div>
+            <!-- card-3 end -->
+        </div>
+    </section>
+
+    <!-- contact -->
+    <section id="contact">
+        <!-- <form action="process.php" method="post" class="contact-form"> -->
+        <form action="#" class="contact-form">
+
+            <div class="from-input-cont">
+                <input class="input-tags" type="text" placeholder="Name" id="userName">
+                <input class="input-tags" type="email" placeholder="Email" id="userEmail" required>
+            </div>
+            <textarea name="message" id="message" placeholder="Write your message here" required></textarea>
+
+            <div>
+                <button class="form-btn" type="reset" id="reset-message">Reset</button>
+                <button class="form-btn" type="submit" id="send-message">Send</button>
+            </div>
+        </form>
+        <div id="sent-modal">&#10004; Sent</div>
+    </section>
+
+
+    <script src="script.js"></script>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("_EB4fEEf60us9v3DH");
+        })();
+    </script>
+</body>
+
+</html>
